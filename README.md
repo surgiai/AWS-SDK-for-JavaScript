@@ -5,17 +5,11 @@ To connect a mesh network with AWS using Node.js, you can use the AWS SDK for Ja
 
 
 //Step 1 :   Install the AWS SDK: First, you need to install the AWS SDK for JavaScript. You can do this using npm, Node.js's package manager
-npm install aws-sdk
+![image](https://user-images.githubusercontent.com/127158314/227665306-b19f4706-d8a0-4666-b6c3-fc1b5859c928.png)
 
 //Step 2 :   Configure AWS credentials: Before you can use the AWS SDK, you need to configure your AWS credentials. You can do this using environment variables, a shared credentials file, or an IAM role.//
 
-const AWS = require('aws-sdk');
-
-AWS.config.update({
-    region: 'your-region',
-    accessKeyId: 'your-access-key-id',
-    secretAccessKey: 'your-secret-access-key'
-});
+![image](https://user-images.githubusercontent.com/127158314/227664819-58f3121f-845a-4b78-8357-afc7bccd1df2.png)
 
 
 //Step 3 : Create the necessary AWS resources: Next, you need to create the necessary AWS resources to connect your mesh network with AWS. This typically involves creating an Amazon Virtual Private Cloud (VPC), subnets, and security groups to provide network isolation and control access to resources. You may also need to create an AWS Direct Connect or VPN connection to provide a secure, dedicated connection between your mesh network and AWS.//
@@ -23,17 +17,7 @@ AWS.config.update({
 
 //You can use the AWS SDK to create these resources programmatically. Here's an example of creating a VPC
 
-const ec2 = new AWS.EC2();
-
-const params = {
-    CidrBlock: '10.0.0.0/16',
-    InstanceTenancy: 'default'
-};
-
-ec2.createVpc(params, function(err, data) {
-    if (err) console.log(err, err.stack);
-    else console.log(data);
-});
+![image](https://user-images.githubusercontent.com/127158314/227664546-90460031-10c6-4b3b-ae74-63a7546e86bb.png)
 
 
 //Step 4 :  Connect your mesh network with AWS: Once you have created the necessary AWS resources, you can connect your mesh network with AWS. This typically involves configuring your mesh network devices to connect to the AWS resources you created in step 3//
