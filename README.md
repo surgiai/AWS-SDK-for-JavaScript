@@ -40,19 +40,7 @@ ec2.createVpc(params, function(err, data) {
 
 //You can use the AWS SDK to manage your mesh network connections programmatically. For example, you can use the AWS IoT SDK to connect IoT devices to AWS IoT Core
 
-const awsIot = require('aws-iot-device-sdk');
-
-const device = awsIot.device({
-    keyPath: 'your-private-key.pem',
-    certPath: 'your-certificate.pem.crt',
-    caPath: 'root-ca.pem',
-    host: 'your-iot-endpoint.amazonaws.com'
-});
-
-device.on('connect', function() {
-    console.log('Connected to AWS IoT Core');
-});
-
+![image](https://user-images.githubusercontent.com/127158314/227664438-30e17cdf-e3e3-4556-9194-f4af0e42a3e9.png)
 
 
 
